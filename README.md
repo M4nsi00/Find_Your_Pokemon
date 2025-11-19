@@ -1,5 +1,5 @@
 # Find_Your_Pokemon
-Un programa que ayuda a clasificar de manera ascendente a los Pokémon basados en sus estadísticas de ataque o ataque especial, y buscando por tipo o generación específica. El programa utiliza una base de datos que contiene solo los Pokémon de primera a séptima generación. El resultado despliega los datos de la siguiente manera: Nombre Pokémon, Tipo 1, Tipo 2, Generación, Ataque y Ataque especial. También los tipos del pokemon están distribuidos en números que representan cada uno de los 18 tipos, distribuidos como muestra la siguiente tabla:
+Un programa que ayuda a clasificar de manera ascendente a los Pokémon basados en sus estadísticas de ataque o ataque especial, y buscando por tipo o generación específica. El programa utiliza una base de datos que contiene solo los Pokémon de primera a séptima generación (Ya se pueden agregar más Pokémon como función). El resultado despliega los datos de la siguiente manera: Nombre Pokémon, Tipo 1, Tipo 2, Generación, Ataque y Ataque especial. También los tipos del pokemon están distribuidos en números que representan cada uno de los 18 tipos, distribuidos como muestra la siguiente tabla:
 
 normal	1
 
@@ -57,11 +57,20 @@ Para la elaboración del programa se utilizó un algoritmo de tipo mergeSort que
 ## Estructura lineal implementada
 Para la elaboración del Historial se utilizó una estructura que almacena los vectores de los filtros aplicados con una estructura tipo stack. Se decidió implementar esta estructura, ya que se buscaba respetar la regla LIFO (Last In First Out) para simular el comportamiento de "Ctrl + z". Este algoritmo tiene una complejidad espacial de O(n). Pero en los casos de insertar y eliminar datos tiene una complejidad de O(1) lo que lo convierte en la opción más viable para implementar el historial.
 
+Actualización 2:
+
+Esta actualización trata más de mejoras a las estructuras previamente aplicadas:
+
+## Historial mejorado
+Se mejoraron algunas funciones pasadas como el historial de filtros, ahora se almacena en un archivo .dat de forma que al cerrar el programa y volver a entrar se carga el último filtro aplicado, este archivo funciona con la misma lógica del stack con la regla LIFO, pero se tuvieron que hacer algunos ajustes al momento de cargar el archivo para que operara correctamente. También si no le interesa seguir con los filtros de la última vez se puede usar la función de eliminar todo el historial.
+
+## ¡Se pueden agregar nuevos Pokémon!!!
+Se implementó una función que permite agregar nuevos Pokémon de octava o novena generación, estos se almacenan en el archivo.csv que se tiene de la Pokedex para que los puedas filtrar con el resto de Pokémon.
 
 ## Consideraciones
 El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
 
-compilar con: "g++ .\Find_Your_Pokemon.cpp .\CargaDatos.cpp .\Filtros.cpp .\Ordenamiento.cpp  .\Historial.cpp .\Pokemon.h -o .\Find_Your_Pokemon.exe "
+compilar con: "g++ .\Find_Your_Pokemon.cpp .\CargaDatos.cpp .\Filtros.cpp .\Ordenamiento.cpp .\Historial.cpp .\Pokemon.h .\GestorDatos.h -o .\Find_Your_Pokemon.exe "
 
 correr en linux: "/Find_Your_Pokemon.exe "
 
