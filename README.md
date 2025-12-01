@@ -47,7 +47,7 @@ En el programa se presentan 4 opciones, las primeras dos filtran por el tipo que
 
 Las otras dos opciones filtran por generación y ordenan el ataque o ataque especial, dependiendo de lo que se decida.
 
-Actualización 1:
+## Actualización 1:
 
 Se implementó un sistema de historial para acumular los filtros aplicados, esto con el objetivo de tener búsquedas más precisas y no solo buscar de filtro en filtro. Con esta implementación de un historial viene también una quinta función llamada deshacer último filtro. Con esto se puede volver a la búsqueda anterior como un "Ctrl + z".
 
@@ -57,7 +57,7 @@ Para la elaboración del programa se utilizó un algoritmo de tipo mergeSort que
 ## Estructura lineal implementada
 Para la elaboración del Historial se utilizó una estructura que almacena los vectores de los filtros aplicados con una estructura tipo stack. Se decidió implementar esta estructura, ya que se buscaba respetar la regla LIFO (Last In First Out) para simular el comportamiento de "Ctrl + z". Este algoritmo tiene una complejidad espacial de O(n). Pero en los casos de insertar y eliminar datos tiene una complejidad de O(1) lo que lo convierte en la opción más viable para implementar el historial.
 
-Actualización 2:
+## Actualización 2:
 
 Esta actualización trata más de mejoras a las estructuras previamente aplicadas:
 
