@@ -28,5 +28,6 @@ void agregarPokemonCSV(const std::string& rutaArchivo) {
             << nuevo.spAtaque << "\n";
 
     archivo.close();
-    std::cout << "✅ Pokemon agregado correctamente al archivo.\n";
+    std::cout << "Pokemon agregado correctamente al archivo.\n";
 }
+
