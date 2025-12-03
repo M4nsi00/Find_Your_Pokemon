@@ -51,10 +51,10 @@ Las otras dos opciones filtran por generación y ordenan el ataque o ataque espe
 
 Se implementó un sistema de historial para acumular los filtros aplicados, esto con el objetivo de tener búsquedas más precisas y no solo buscar de filtro en filtro. Con esta implementación de un historial viene también una quinta función llamada deshacer último filtro. Con esto se puede volver a la búsqueda anterior como un "Ctrl + z".
 
-## Algoritmo de ordenamiento implementado
+## Algoritmo de ordenamiento implementado (Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa)/(Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.).
 Para la elaboración del programa se utilizó un algoritmo de tipo mergeSort que ordena los datos de ataque o ataque especial de forma ascendente, dependiendo del tipo de estadística que se desea acomodar. Se decidió implementar este algoritmo ya que tiene una complejidad de 0(n log n) que, aunque no es la más óptima, sigue siendo bastante buena. Por otro lado, este algoritmo es bastante estable a diferencia de otros algoritmos que en el peor de los casos su complejidad llega a O(n^2). También el algoritmo se implementó con la posibilidad de modificar los comparadores al momento de decidir ordenar la base de datos.
 
-## Estructura lineal implementada
+## Estructura lineal implementada (Hace un análisis de complejidad correcto y completo todas las estructuras de datos y cada uno de sus usos en el programa)/(Selecciona una estructura de datos adecuada al problema y lo usa correctamente.)
 Para la elaboración del Historial se utilizó una estructura que almacena los vectores de los filtros aplicados con una estructura tipo stack. Se decidió implementar esta estructura, ya que se buscaba respetar la regla LIFO (Last In First Out) para simular el comportamiento de "Ctrl + z". Este algoritmo tiene una complejidad espacial de O(n). Pero en los casos de insertar y eliminar datos tiene una complejidad de O(1) lo que lo convierte en la opción más viable para implementar el historial.
 
 ## Actualización 2:
