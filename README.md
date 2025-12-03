@@ -67,7 +67,7 @@ Se mejoraron algunas funciones pasadas como el historial de filtros, ahora se al
 ## ¡Se pueden agregar nuevos Pokémon!!!
 Se implementó una función que permite agregar nuevos Pokémon de octava o novena generación; estos se almacenan en el archivo.csv que se tiene de la Pokedex para que los puedas filtrar con el resto de Pokémon. Es muy importante seguir el formato que se pide, en un punto indica agregar el valor numérico del tipo de pokemon y luego indica agregar el valor en texto del tipo, se tiene que respetar la tabla indicada al inicio de este read.me para el funcionamiento correcto.
 
-## Complejidad total del programa
+## Complejidad total del programa (Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.)
 Para saber cuál es la complejidad total del programa, buscamos cuál es la estructura con mayor complejidad de todo el programa.
 
 En este caso las dos estructuras principales son el filtro de ordenamiento de ataque o ataque especial con una complejidad de O(n log n) y la estructura del historial usando stack que es O(n). Como se puede observar, la complejidad dominante es la del filtro de ordenamiento.
