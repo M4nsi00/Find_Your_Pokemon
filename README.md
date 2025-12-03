@@ -52,10 +52,10 @@ Las otras dos opciones filtran por generación y ordenan el ataque o ataque espe
 Se implementó un sistema de historial para acumular los filtros aplicados, esto con el objetivo de tener búsquedas más precisas y no solo buscar de filtro en filtro. Con esta implementación de un historial viene también una quinta función llamada deshacer último filtro. Con esto se puede volver a la búsqueda anterior como un "Ctrl + z".
 
 ## Algoritmo de ordenamiento implementado (Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa)/(Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.).
-Para la elaboración del programa se utilizó un algoritmo de tipo mergeSort que ordena los datos de ataque o ataque especial de forma ascendente, dependiendo del tipo de estadística que se desea acomodar. Se decidió implementar este algoritmo ya que tiene una complejidad de 0(n log n) que, aunque no es la más óptima, sigue siendo bastante buena. Por otro lado, este algoritmo es bastante estable a diferencia de otros algoritmos que en el peor de los casos su complejidad llega a O(n^2). También el algoritmo se implementó con la posibilidad de modificar los comparadores al momento de decidir ordenar la base de datos.
+Para la elaboración del programa se utilizó un algoritmo de tipo mergeSort que ordena los datos de ataque o ataque especial de forma ascendente, dependiendo del tipo de estadística que se desea acomodar. Se decidió implementar este algoritmo ya que tiene una complejidad de 0(n log n) en el peor caso, en el mejor caso y en el caso promedio, que, aunque no es la más óptima, sigue siendo bastante buena. Por otro lado, este algoritmo es bastante estable a diferencia de otros algoritmos que en el peor de los casos su complejidad llega a O(n^2). También el algoritmo se implementó con la posibilidad de modificar los comparadores al momento de decidir ordenar la base de datos.
 
 ## Estructura lineal implementada (Hace un análisis de complejidad correcto y completo todas las estructuras de datos y cada uno de sus usos en el programa)/(Selecciona una estructura de datos adecuada al problema y lo usa correctamente.)
-Para la elaboración del Historial se utilizó una estructura que almacena los vectores de los filtros aplicados con una estructura tipo stack. Se decidió implementar esta estructura, ya que se buscaba respetar la regla LIFO (Last In First Out) para simular el comportamiento de "Ctrl + z". Este algoritmo tiene una complejidad espacial de O(n). Pero en los casos de insertar y eliminar datos tiene una complejidad de O(1) lo que lo convierte en la opción más viable para implementar el historial.
+Para la elaboración del Historial se utilizó una estructura que almacena los vectores de los filtros aplicados con una estructura tipo stack. Se decidió implementar esta estructura, ya que se buscaba respetar la regla LIFO (Last In First Out) para simular el comportamiento de "Ctrl + z". Este algoritmo tiene una complejidad espacial de O(n) en el peor caso. Pero en los casos de insertar y eliminar datos tiene una complejidad de O(1) lo que lo convierte en la opción más viable para implementar el historial.
 
 ## Actualización 2:
 
@@ -65,7 +65,14 @@ Esta actualización trata más de mejoras a las estructuras previamente aplicada
 Se mejoraron algunas funciones pasadas como el historial de filtros, ahora se almacena en un archivo .dat de forma que al cerrar el programa y volver a entrar se carga el último filtro aplicado, este archivo funciona con la misma lógica del stack con la regla LIFO, pero se tuvieron que hacer algunos ajustes al momento de cargar el archivo para que operara correctamente. También si no le interesa seguir con los filtros de la última vez se puede usar la función de eliminar todo el historial.
 
 ## ¡Se pueden agregar nuevos Pokémon!!!
-Se implementó una función que permite agregar nuevos Pokémon de octava o novena generación, estos se almacenan en el archivo.csv que se tiene de la Pokedex para que los puedas filtrar con el resto de Pokémon.
+Se implementó una función que permite agregar nuevos Pokémon de octava o novena generación; estos se almacenan en el archivo.csv que se tiene de la Pokedex para que los puedas filtrar con el resto de Pokémon. Es muy importante seguir el formato que se pide, en un punto indica agregar el valor numérico del tipo de pokemon y luego indica agregar el valor en texto del tipo, se tiene que respetar la tabla indicada al inicio de este read.me para el funcionamiento correcto.
+
+## Complejidad total del programa
+Para saber cuál es la complejidad total del programa, buscamos cuál es la estructura con mayor complejidad de todo el programa.
+
+En este caso las dos estructuras principales son el filtro de ordenamiento de ataque o ataque especial con una complejidad de O(n log n) y la estructura del historial usando stack que es O(n). Como se puede observar, la complejidad dominante es la del filtro de ordenamiento.
+
+Es por esto que la complejidad total del programa es O(n log n)
 
 ## Consideraciones
 El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
