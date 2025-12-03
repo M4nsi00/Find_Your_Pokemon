@@ -19,7 +19,7 @@ void agregarPokemonCSV(const std::string& rutaArchivo) {
     std::cout << "Ingrese tipo2 (0-18, 0 si no tiene): "; std::cin >> nuevo.tipo2_num;
     std::cout << "Ingrese tipo1 (no numerico valor en ingles): "; std::cin >> nuevo.tipo1_str;
     if(nuevo.tipo2_num != 0){
-    std::cout << "Ingrese tipo2 (no numerico valor en ingles, si no tiene poner ,): "; std::cin >> nuevo.tipo2_str;
+    std::cout << "Ingrese tipo2 (no numerico valor en ingles): "; std::cin >> nuevo.tipo2_str;
     } else{
         nuevo.tipo2_str = " ";
     }
