@@ -6,8 +6,10 @@
 struct Pokemon {
     int numero;
     std::string nombre;
-    int tipo1;
-    int tipo2;
+    std::string tipo1_str;
+    std::string tipo2_str;
+    int tipo1_num;
+    int tipo2_num;
     int generacion;
     int ataque;
     int spAtaque;

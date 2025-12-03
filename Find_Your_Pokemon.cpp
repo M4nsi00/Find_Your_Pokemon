@@ -10,8 +10,8 @@
 void mostrarPokemon(const std::vector<Pokemon>& lista) {
     for (const auto& p : lista) {
         std::cout << p.numero << " - " << p.nombre
-                  << " | Tipo1: " << p.tipo1
-                  << " | Tipo2: " << p.tipo2
+                  << " | Tipo1: " << p.tipo1_num
+                  << " | Tipo2: " << p.tipo2_num
                   << " | Gen: " << p.generacion
                   << " | Atk: " << p.ataque
                   << " | SpAtk: " << p.spAtaque
@@ -88,11 +88,11 @@ int main() {
         else if(opcion == 6){
             agregarPokemonCSV("pokemon.csv");
             pokedex = cargarPokemon("pokemon.csv");
+            mostrarPokemon(pokedex);
         }
         else if(opcion == 7){
             pokedex = cargarPokemon("pokemon.csv");
             historial.limpiarHistorial(pokedex);
-            mostrarPokemon(pokedex);
         }
         
         cout << "Historial de estados guardados: " << historial.tamanio() << endl;

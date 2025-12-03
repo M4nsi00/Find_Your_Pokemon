@@ -30,8 +30,8 @@ std::vector<Pokemon> cargarPokemon(const std::string& nombreArchivo) {
         Pokemon p;
         p.numero = std::stoi(columnas[2]);
         p.nombre = columnas[1];
-        p.tipo1 = std::stoi(columnas[7]);   // type1_num
-        p.tipo2 = std::stoi(columnas[8]);   // type2_num
+        p.tipo1_num = std::stoi(columnas[7]);   // type1_num
+        p.tipo2_num = std::stoi(columnas[8]);   // type2_num
         p.generacion = std::stoi(columnas[6]);
         p.ataque = std::stoi(columnas[0]);
         p.spAtaque = std::stoi(columnas[3]);

@@ -3,7 +3,7 @@
 std::vector<Pokemon> filtrarPorTipo(const std::vector<Pokemon>& lista, int tipo) {
     std::vector<Pokemon> resultado;
     for (const auto& p : lista) {
-        if (p.tipo1 == tipo || p.tipo2 == tipo) {
+        if (p.tipo1_num == tipo || p.tipo2_num == tipo) {
             resultado.push_back(p);
         }
     }

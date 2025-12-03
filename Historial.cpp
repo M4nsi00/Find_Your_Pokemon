@@ -44,8 +44,8 @@ void Historial::guardarHistorial(const std::string& ruta){
 
         out << estado.size() << "\n";
         for (const auto& p : estado) {
-            out << p.numero << "," << p.nombre << "," << p.tipo1 << ","
-                << p.tipo2 << "," << p.generacion << "," << p.ataque << ","
+            out << p.numero << "," << p.nombre << "," << p.tipo1_num << ","
+                << p.tipo2_num << "," << p.generacion << "," << p.ataque << ","
                 << p.spAtaque << "\n";
         }
     }
@@ -84,7 +84,7 @@ void Historial::cargarHistorial(const std::string& ruta){
 
             in >> p.numero >> coma;
             std::getline(in, p.nombre, ',');
-            in >> p.tipo1 >> coma >> p.tipo2 >> coma
+            in >> p.tipo1_num >> coma >> p.tipo2_num >> coma
                >> p.generacion >> coma >> p.ataque >> coma >> p.spAtaque;
 
             if (!in) break;
