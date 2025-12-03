@@ -15,11 +15,15 @@ void agregarPokemonCSV(const std::string& rutaArchivo) {
     std::cout << "Ingrese nombre: "; std::cin >> nuevo.nombre;    
     std::cout << "Ingrese numero: "; std::cin >> nuevo.numero;
     std::cout << "Ingrese ataque especial: "; std::cin >> nuevo.spAtaque;
-    std::cout << "Ingrese tipo1 (no numerico valor en ingles): "; std::cin >> nuevo.tipo1_str;
-    std::cout << "Ingrese tipo2 (no numerico valor en ingles, si no tiene poner ,): "; std::cin >> nuevo.tipo2_str;
-    std::cout << "Ingrese generacion (1-9): "; std::cin >> nuevo.generacion;
     std::cout << "Ingrese tipo1 (1-18): "; std::cin >> nuevo.tipo1_num;
     std::cout << "Ingrese tipo2 (0-18, 0 si no tiene): "; std::cin >> nuevo.tipo2_num;
+    std::cout << "Ingrese tipo1 (no numerico valor en ingles): "; std::cin >> nuevo.tipo1_str;
+    if(nuevo.tipo2_num != 0){
+    std::cout << "Ingrese tipo2 (no numerico valor en ingles, si no tiene poner ,): "; std::cin >> nuevo.tipo2_str;
+    } else{
+        nuevo.tipo2_str = " ";
+    }
+    std::cout << "Ingrese generacion (1-9): "; std::cin >> nuevo.generacion;
 
 
     archivo << nuevo.ataque << ","
